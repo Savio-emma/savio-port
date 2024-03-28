@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+   --form-color: #222;
+   --form-background: #303030;
+   --input-backround:#292929;
+}
+
+.light-theme{
+    --form-color: #e5e5e5;
+    --form-background: #c7c7c7;
+    --input-backround:#d0d0d0;
+}
+
+body{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+header .header-buttons .button-one{
+    border: none;
+}
+
+header .header-buttons .button-three{
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.see{
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+.day-night{
+    margin-top: 70px;
+    position: absolute;
+    position: fixed;
+}
+/* you will find everything about the hero section below */
+/* all codes are written accordingly as the appear in the browser */
+.hero-section{
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+            /* here shows the code for the header section. it also shows the animation codes at the end*/
+
+
+
+.contact-us{
+   width: 850px;
+   height: 580px;
+   background-color: var(--skill-color);
+   display: flex;
+   align-items: center;
+   padding: 0 20px;
+   
+}
+
+.contact-prompt{
+    text-align: left;
+}
+
+.contact-prompt h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.contact-prompt h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.contact-prompt .prompt-writeup{
+    margin-bottom: 30px;
+}
+
+.contact-prompt hr{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.contact-prompt .skill-list div{
+    display: flex;
+    position: relative;
+}
+
+.contact-prompt .skill-list i {
+    left: 65%;
+    position: absolute;
+    color: var(--main-color);
+}
+
+.meet{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.prompt-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: fit-content;
+}
+
+.prompt-icons  i {
+    scale: 1.6;
+    margin: 10px;
+}
+
+.facebook{
+   grid-column-start: 1;
+}
+.facebook i{
+    color: rgb(41, 41, 250);
+    background-color: white;
+}
+
+.twitter {
+    grid-column-start: 2;
+}
+.twitter i {
+    color: black;
+    background-color: white;
+}
+
+/* .pinterest {
+    background-color: white;
+} */
+.pinterest i {
+    color: red;
+    background-color: white;
+}
+
+/* .linkedin {
+    background-color:white ;
+} */
+.linkedin i {
+    color: blue;
+    background-color: white;
+}
+
+.instagram i{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+/* .github {
+    background-color: black;
+} */
+.github i {
+    color: black;
+    background-color: white;
+}
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.animated-form {
+    position: relative;
+    width: 500px;
+    min-height: 580px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background: repeating-conic-gradient(from var(--a), var(--main-color) 0%,
+    var(--main-color) 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        --a: 0deg
+    }
+    100%
+    {
+        --a: 360deg
+    }
+}
+
+.animated-form::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    min-height: 580px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: repeating-conic-gradient(from var(--a),var(--main-color) 0%,
+    var(--main-color) 10%, transparent 10%, transparent 50%);
+    animation: animate 6s 1.5s linear infinite;
+}
+
+.animated-form::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 20px solid var(--form-color);
+    background: var(--form-background);
+}
+
+form{
+    position: relative;
+    z-index: 1;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+form h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.input
+{
+    position: relative;
+    margin-bottom: 30px;
+    width: 350px;
+    border: none;
+}
+
+.input span{
+    position: absolute;
+    inset: -2px;
+    z-index: 1;
+}
+
+
+.input span::before
+{
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: repeating-conic-gradient(from var(--a),var(--main-color) 0%,
+    var(--main-color-hover) 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+    box-shadow: 0 0 0 2px var(--form-background);
+}
+
+.input:nth-child(2) span::before{
+    animation-delay: -3.5s;
+}
+
+.input:nth-child(4) span::before{
+    animation-delay: -3.5s;
+}
+
+.input span::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--input-backround);
+}
+
+
+.textarea textarea{
+    z-index: 1000;
+}
+
+.input input, .input textarea
+{
+    position: relative;
+    z-index: 1;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 8px 14px;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.input input::placeholder
+{
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+form .submit input[type=submit]
+{
+    background: var(--main-color);
+    cursor: pointer;
+    box-shadow: 0 0 0 4px var(--main-color);
+    width: 300px;
+    filter: drop-shadow(0 0 15px #67cfc3);
+    margin-top: 25px;
+    height: 40px;
+    transition: background-color 1s, color 1s;
+}
+
+form .submit input[type=submit]:hover{
+    background: var(--main-color-hover);
+    box-shadow: 0 0 0 4px var(--main-color-hover);
+    color: white;
+}
+
+
+
+.main-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.socials{
+    background-color: var(--skill-color);
+    width: 80%;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.socials i{
+    font-size: 1.5rem;
+    transition: opacity 1s;
+} 
+
+.socials i:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.green i {
+    color: rgb(29, 207, 29);
+
+}
+
+.blue i {
+  color: rgb(61, 61, 219);
+}
+
+.purple i{
+    color: rgb(112, 50, 156);
+}
+
+.socials h4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+}
+
+.socials div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-social hr{
+    visibility: hidden;
+}
+
+
+
+
+
+
+@media (width <= 850px) {
+   .hero-section{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .contact-us {
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border-bottom: 3px solid white;
+   }
+   .animated-form{
+    margin: 20px;
+   }  
+}
+
+@media (width <= 450px) {
+    header a {
+        margin-right: 2px;
+        scale: .8;
+    }
+    header img{
+        margin-left: 2px;
+        scale: .8;
+    }
+
+    header {
+        max-width: 414px; 
+    }
+}
+
+@media (width <= 628px) {
+    .hero-section {
+        scale: .8;
+        margin-top: 20px;
+    }
+    .main-social{
+        margin-top: 0;
+    }
+    .socials{
+        flex-direction: column;
+        height: fit-content;
+        padding: 20px;
+    }
+    .socials hr {
+        width: 70px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        visibility: visible;
+    }
+    .animated-form{
+        scale: .8;
+    }
+}
+
+ @media (width <= 428px) {
+    .animated-form {
+      scale: .65;
+    }
+}
+
+@media (width <= 290px) {
+    .socials p {
+        scale: .7;
+    }
+}
+
+.form-section{
+    opacity: 0;
+    transition: transform 2s, 1s;  
+    transform: translateY(-100px); 
+}
+
+.contact-section{
+    opacity: 0;
+    transition: transform 2s, 1s;  
+    transform: translateX(-100px); 
+}
+
+.social-section{
+    opacity: 0;
+    transition: transform 2s, 1s;  
+    transform: translateY(100px); 
+}
+
+.input{
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: transform 2s, 1s;  
+}
+
+.toggle {
+    opacity: 1;
+    transform: none;
+}
