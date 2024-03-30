@@ -34,8 +34,8 @@ header .header-buttons .button-three{
     width: 50px;
     z-index: 5;
 }
-.day-night{
-    margin-top: 70px;
+.light-click{
+    margin-top: 30px;
     position: absolute;
     position: fixed;
 }
