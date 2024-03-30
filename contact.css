@@ -39,6 +39,7 @@ header .header-buttons .button-three{
     position: absolute;
     position: fixed;
 }
+
 /* you will find everything about the hero section below */
 /* all codes are written accordingly as the appear in the browser */
 .hero-section{
@@ -52,8 +53,6 @@ header .header-buttons .button-three{
 }
 
             /* here shows the code for the header section. it also shows the animation codes at the end*/
-
-
 
 .contact-us{
    width: 850px;
@@ -291,10 +290,8 @@ form h2{
     width: 100%;
     padding: 8px 14px;
     background: transparent;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: var(--primary-color);
-    text-transform: uppercase;
 }
 .input input::placeholder
 {
@@ -437,6 +434,9 @@ form .submit input[type=submit]:hover{
     }
     .animated-form{
         scale: .8;
+    }
+    .light-click{
+        margin-top: 50px;
     }
 }
 

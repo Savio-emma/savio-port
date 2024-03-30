@@ -463,8 +463,20 @@ input[type="checkbox"]{
     background: conic-gradient(var(--main-color) 3.6deg, var(--main-color) 316.8deg, rgb(118, 117, 117) 0deg);
 }
 
-.skill-section-container .java-script{
+.skill-section-container .java-script, .skill-section-container .debugging{
     background: conic-gradient(var(--main-color) 3.6deg, var(--main-color) 180deg, rgb(118, 117, 117) 0deg);
+}
+
+.skill-section-container .photoshop{
+    background: conic-gradient(var(--main-color) 3.6deg, var(--main-color) 252deg, rgb(118, 117, 117) 0deg);
+}
+
+.skill-section-container .responsiveness, .skill-section-container .git-hub{
+    background: conic-gradient(var(--main-color) 3.6deg, var(--main-color) 295.2deg, rgb(118, 117, 117) 0deg);
+}
+
+.skill-section-container .research{
+    background: conic-gradient(var(--main-color) 3.6deg, var(--main-color) 216deg, rgb(118, 117, 117) 0deg);
 }
 
 .circle-skill span{
