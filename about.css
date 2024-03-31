@@ -1,3 +1,5 @@
+/* BASIC STYLINGS, OTHER BASIC STYLINGS ARE CONTAINED IN STYLE.CSS */
+
 :root{
     --accordion-color:  rgb(50, 50, 50);
     --accordion-hover: rgb(60, 60, 60);
@@ -16,6 +18,10 @@ body{
   color: var(--primary-color);
 }
 
+
+
+
+/* SPECIAL HEADER STYLINGS FOR CONACT PAGE */
 header .header-buttons .button-one{
     border: none;
 }
@@ -32,6 +38,12 @@ header .header-buttons .button-two{
 .light-click label::after{
     display: none;
 }
+
+
+
+
+
+/* FLEX IMAGE STYLINGS */
 
 .main-section{
     margin-top: 200px;
@@ -70,7 +82,13 @@ img{
 .flex-sub-image img {
     height: 200px;
 }
+/* FLEX IMAGE STYLINGS ENDS */
 
+
+
+
+
+/* PROFILE STYLINGS BEGINS */
 .profile{
     max-width: 700px;
 }
@@ -79,6 +97,7 @@ img{
     text-align: center;
 }
 
+/* the accordion stylings */
 .accordion{
     margin: 60px auto;
     width: 600px;
@@ -113,6 +132,7 @@ img{
     background-color: var(--accordion-hover);
 }
 
+/* this is to add an arrow showing wether the hidden-div is hidden or not */
 label::after{
     font-family: "Font Awesome 5 Free";
     content: '\f150';
@@ -142,7 +162,7 @@ input[type="radio"]{
 }
 
 
-
+/* this is to display the hidden div when it is checked */
 .accordion input[type="radio"]:checked + label + .content{
     max-height: 700px;
     padding: 10px 10px 20px;
@@ -151,7 +171,14 @@ input[type="radio"]{
 .accordion input[type="radio"]:checked + label::after{
     transform: rotate(180deg);
 }
+/* END OF THE PROFILE STYLINGS */
 
+
+
+
+
+
+/* MEDIA QUERY ACROSS ALL DEVICE WIDTHS */
 @media (width <= 1400px) {
     .main-section{
         display: flex;
@@ -235,6 +262,10 @@ input[type="radio"]{
     }
 }
 
+/* END OF MEDIA QUERIES */
+
+
+/* INTERSECTION OBSERVER CSS PROPERTY */
 .profile-observer{
     opacity: 0;
     transform: translateY(-100px);

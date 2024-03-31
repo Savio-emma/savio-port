@@ -1,14 +1,4 @@
-// var icon = document.getElementById("icon");
-
-// icon.onclick = function(){
-//   document.body.classList.toggle("light-theme");
-//   if(document.body.classList.contains("light-theme")){
-//     icon.src = "images/moon-solid.svg"
-//   } else {
-//     icon.src = "images/sun_image.png"
-//   }
-// }
-
+// UPDATED AND REQUIRED METHOD FOR USING INTERSECTION OBSERVER TO OBSERVER MULTIPLE ELEMENTS AT ONCE
 
 var sections = document.querySelectorAll(".section");
 
@@ -21,7 +11,6 @@ sections.forEach(section => {
         entries.forEach(entry =>{
             if (entry.isIntersecting){
                 entry.target.classList.add("toggle");
-                console.log(entry);
             } else {
                 entry.target.classList.remove("toggle");
             }

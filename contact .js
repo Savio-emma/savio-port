@@ -1,3 +1,5 @@
+
+// OBSERVER FUNCTION BEGINS
 const firstSection = document.querySelector(".form-section");
 const secondSection = document.querySelector(".contact-section");
 const thirdSection = document.querySelector(".social-section");
@@ -49,17 +51,12 @@ elements.forEach(element => {
   }, Option);
   checker.observe(element);
 })
+// OBSERVER FUNCTION ENDS
 
-// var icon = document.getElementById("icon");
 
-// icon.onclick = function(){
-//   document.body.classList.toggle("light-theme");
-//   if(document.body.classList.contains("light-theme")){
-//     icon.src = "images/moon-solid.svg"
-//   } else {
-//     icon.src = "images/sun_image.png"
-//   }
-// }
+
+
+// ALERT AT THE SUBMISSION OF THE FORM
 
 const submitButton = document.getElementById("submit-button");
 

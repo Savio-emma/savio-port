@@ -1,3 +1,5 @@
+/* BASIC STYLINGS, OTHER BASIC STYLINGS ARE CONTAINED IN STYLE.CSS */
+
 *{
     margin: 0;
     padding: 0;
@@ -20,6 +22,7 @@ body{
     color: var(--primary-color);
 }
 
+/* SPECIAL HEADING STYLINGS FOR CONTACT PAGE */
 header .header-buttons .button-one{
     border: none;
 }
@@ -134,17 +137,11 @@ header .header-buttons .button-three{
     background-color: white;
 }
 
-/* .pinterest {
-    background-color: white;
-} */
 .pinterest i {
     color: red;
     background-color: white;
 }
 
-/* .linkedin {
-    background-color:white ;
-} */
 .linkedin i {
     color: blue;
     background-color: white;
@@ -155,9 +152,6 @@ header .header-buttons .button-three{
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
-/* .github {
-    background-color: black;
-} */
 .github i {
     color: black;
     background-color: white;
@@ -193,6 +187,14 @@ header .header-buttons .button-three{
         --a: 360deg
     }
 }
+
+
+
+
+
+
+
+/* Animared form begins */
 
 .animated-form::before{
     content: '';
@@ -316,9 +318,12 @@ form .submit input[type=submit]:hover{
     box-shadow: 0 0 0 4px var(--main-color-hover);
     color: white;
 }
+/* Animated form ends */
 
 
 
+
+/* MAIN SOCIALS BEGINS */
 .main-social{
     display: flex;
     align-items: center;
@@ -376,12 +381,13 @@ form .submit input[type=submit]:hover{
 .main-social hr{
     visibility: hidden;
 }
+/* MAIN SOCIALS ENDS */
 
 
 
 
 
-
+/* MEDIA QUERIES ACROSS ALL DEVICE WIDTHS */
 @media (width <= 850px) {
    .hero-section{
     display: flex;
@@ -451,7 +457,12 @@ form .submit input[type=submit]:hover{
         scale: .7;
     }
 }
+/* MEDIA QUERIES ENDS */
 
+
+
+
+/* OBSEVER CSS PROPERTIES */
 .form-section{
     opacity: 0;
     transition: transform 2s, 1s;  

@@ -1,23 +1,4 @@
-
-  // const allRadioButtons = document.querySelectorAll(".radio-buttons");
-  // allRadioButtons.addEventListener('click', function(){
-  //   allRadioButtons.forEach(value => {
-  //     if (value.checked === true){
-  //       value.checked = false;
-  //     }
-  //   })
-  // })
-
-// const icon = document.querySelector("#icon");
-
-// icon.onclick = function(){
-//   document.body.classList.toggle("light-theme");
-//   if(document.body.classList.contains("light-theme")){
-//     icon.src = "images/moon-solid.svg"
-//   } else {
-//     icon.src = "images/sun_image.png"
-//   }
-// }
+// THIS MARKS THEBEGINNING OF THE OBSERVATION FUNCTION
 
 var flexMainImage = document.querySelector(".flex-main-image");
 
@@ -27,7 +8,7 @@ const Options = {
   threshold: 0.4
 }
 
-
+//actual observation function
 const observer = new IntersectionObserver (function(entries, observer){
   entries.forEach(entry => {
     if (entry.isIntersecting){
@@ -41,6 +22,8 @@ const observer = new IntersectionObserver (function(entries, observer){
 observer.observe(flexMainImage);
 observer.observe(flexSubImage);
 
+
+//observing a group of elements togethee
 const elements = document.querySelectorAll(".profile-observer");
 
 elements.forEach(element => {
@@ -56,7 +39,12 @@ elements.forEach(element => {
   }, Option);
   checker.observe(element);
 })
+// END OF OBSERVATION FUNCTION
 
+
+
+
+//FUNCTION THAT CLOSES THE ACCORDION WHEN IT IS CLICKED
 var radioButtons = document.querySelectorAll('input[type="radio"]');
 
 // Add click event listener to each radio button

@@ -1,48 +1,35 @@
+//THIS JS AFFECTS ALL THE WEBPAGES
 
-// Retrieve checkbox state from local storage
+//LIGHT AND DARK THEME TOGGLE FUNCTION
+// Retrieve checkbox state from local storage when the page is loaded
 document.addEventListener('DOMContentLoaded', function() {
   const checkbox = document.getElementById('checkbox');
   const checkboxState = localStorage.getItem('checkboxState');
 
   if (checkboxState === 'checked') {
     checkbox.checked = true;
-    enableDarkMode();
+    document.body.classList.add('light-theme');
+    icon.src = "images/moon-solid.svg"
   }
 
   // Update local storage and toggle dark mode when checkbox state changes
   checkbox.addEventListener('change', function() {
     if (checkbox.checked) {
       localStorage.setItem('checkboxState', 'checked');
-      enableDarkMode();
+      document.body.classList.add('light-theme');
+    icon.src = "images/moon-solid.svg"
     } else {
       localStorage.removeItem('checkboxState');
-      disableDarkMode();
+      document.body.classList.remove('light-theme');
+    icon.src = "images/sun_image.png";
     }
   });
 
-  function enableDarkMode() {
-    document.body.classList.add('light-theme');
-    icon.src = "images/moon-solid.svg"
-  }
-
-  function disableDarkMode() {
-    document.body.classList.remove('light-theme');
-    icon.src = "images/sun_image.png";
-  }
 });
 
-var icon = document.getElementById("icon");
 
 
-// icon.onclick = function(){
-//   document.body.classList.toggle("light-theme");
-//   if(document.body.classList.contains("light-theme")){
-//     icon.src = "images/moon-solid.svg"
-//   } else {
-//     icon.src = "images/sun_image.png"
-//   }
-// }
-
+// THIS AFFECTS ONLY THE SCROLL TO THE TOP PROPERTY ACROSS THE WEBPAGES
 var scrollTop = document.querySelector(".scroll-to-top");
 
 window.addEventListener("scroll", ()=>{

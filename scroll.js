@@ -1,3 +1,5 @@
+
+// CALLING OUT PARAMETERS TO BE OBSEVED. MORE FINLEY AND IMPROVED JAVASCRIPT FOR THIS CAN BE FOUND AT EXP.JS
 var firstSection = document.querySelector(".first-section");
 
 var secondSection = document.querySelector(".second-section");
@@ -21,6 +23,8 @@ var Options = {
     threshold: 0
 }
 
+
+//THE ACTUAL OBSERVER FUNCTION
 var observer = new IntersectionObserver (function(entries, observer){
     entries.forEach(entry => {
       if (entry.isIntersecting){
@@ -45,6 +49,9 @@ observer.observe(eightSection);
 observer.observe(ninthSection);
 
 
+
+
+//OBSREVER OBSERVING GROUP OF ELEMENTS TOGETHER
 var elements = document.querySelectorAll(".hidden");
 
 elements.forEach(element => {

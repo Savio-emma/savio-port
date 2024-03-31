@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+
+
+/* HERE ARE SOME BASIC STYLINGS THAT WOULD AFFECT THE WHOLE WEBSITE. */
 html{
     scroll-behavior: smooth;
 }
@@ -586,6 +589,9 @@ input[type="checkbox"]{
 /* here marks the end of the experience section */
 
 
+
+/* HERE MARKS THE BEGINNING OF CALL-TO-ACTION SECTION */
+
 .call-to-action{
     font-family: 'Noto Sans', sans-serif;
     color: var(--primary-color);
@@ -661,9 +667,15 @@ input[type="checkbox"]{
         left: 0%;
     }
 }
+/* HERE MARKS THE END OF THE CALL TO ACTION SECTION */
 
 
 
+
+
+
+
+/* HERE ARE THE FOOTER STYLINGS */
 footer {
     padding: 50px;
     display: flex;
@@ -721,9 +733,16 @@ footer .copy-right p {
     margin-top: 10px;
     font-size: .8rem;
 }
+/* END OF THE FOOTER STYLINGS */
 
 
 
+
+
+
+
+
+/* MEDIA QUERIES FOR ALL SCREEN WIDTHS */
 @media (width <= 900px) {
     .hero-call {
         flex-direction: column;
@@ -936,7 +955,13 @@ footer .copy-right p {
         scale: .6;
     }
 }
+/* END OF THE MEDIA QUERIES */
 
+
+
+
+
+/* CSS STYLINGS OF THE INTERSECTION OBSERVER */
 
  .fifth-section, .ninth-section, .eight-section{
     opacity: 0;
