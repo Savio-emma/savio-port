@@ -68,28 +68,46 @@ header img{
     justify-content: right;
 }
 
-header a{
+header .header-buttons div a{
     color: black;
     text-decoration: none;
-    margin-left: 10px;
     margin-right: 2rem;
     cursor: pointer;
     transition: ease-in 500ms;
-    font-family: "Pacifico", cursive;
-    text-shadow: 4px 4px 4px #aaa;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
 }
 
-header a:hover{
-    color: #454443;
-    text-shadow: 4px 4px 4px #907163;
+header .header-buttons div a:hover{
+    color: var(--main-color);
+}
+
+.open-menu{
+    font-size: 2rem;
+    margin: 20px;
+    cursor: pointer;
+    transition: color 1s ease-in;
+    display: none;
+    color: black;
+}
+
+.header-buttons .close-menu, .header-buttons .ham-icons i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    color: #000;
+    transition: color 500ms linear;
+}
+
+.ham-icons a i:hover{
+    color: var(--primary-color);
 }
 
 header .header-buttons .button-one{
     transition-property: position;
     visibility: hidden;
     animation: button .5s ease-in .5s forwards;
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
+
 }
 
 header .header-buttons .button-two{
@@ -122,6 +140,59 @@ header .header-buttons .button-four{
         transform: none;
      }
 }
+
+/* this is the open amd close menu for tabs and mobiles */
+@media (width < 800px) {
+    .header-buttons{
+        display: flex;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        row-gap: 30px;
+        transition:  top 1s ease;
+        display: none;
+    }
+    header .header-buttons div a, .header-buttons .ham-icons i{
+        color: var(--primary-color);
+    }
+
+    .header-buttons .close-menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 2rem;
+    }
+
+     .open-menu{
+        display: block;  
+    }
+
+    .header-buttons .ham-icons i{
+        display: inline-block;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+   .close-menu i{
+    color: var(--primary-color);
+    transition: color 500ms linear;
+   }
+   .header-buttons .ham-icons i:hover, .close-menu i:hover{
+        color: var(--main-color);
+    }
+}
+
+
+
+
 .light-click{
     max-width: 50px;
     overflow: hidden;
@@ -225,7 +296,8 @@ input[type="checkbox"]{
 }
 .hero-section h1{
     margin-bottom: 10px;
-    font-family: 'Tangerine', serif;
+    /* font-family: 'Tangerine', serif; */
+    font-family: "Kode Mono", monospace;
     font-size: 48px;
     text-shadow: 4px 4px 4px #5d5d5d;
 }
@@ -249,9 +321,10 @@ input[type="checkbox"]{
 .hero-call{
     color: #000;
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 0px;
     background-color: var(--main-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
@@ -812,9 +885,9 @@ footer .copy-right p {
     .call-text{
         padding: 100px 20px;
     }
-    header img, header div {
+    /* header img, header div {
         scale: .8;
-    }
+    } */
     .day-night{
         scale: .8;
     }
@@ -874,10 +947,7 @@ footer .copy-right p {
         scale: .7;
     }
 
-    .experience{
-        
-    }
-
+    
     .my-skills-grid{
         scale: .7;
     }
