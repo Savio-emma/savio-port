@@ -79,7 +79,7 @@ header .header-buttons div a{
 }
 
 header .header-buttons div a:hover{
-    color: var(--main-color);
+    opacity: .4;
 }
 
 .open-menu{
@@ -107,6 +107,8 @@ header .header-buttons .button-one{
     transition-property: position;
     visibility: hidden;
     animation: button .5s ease-in .5s forwards;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
 
 }
 
@@ -159,10 +161,23 @@ header .header-buttons .button-four{
         row-gap: 30px;
         transition:  top 1s ease;
         display: none;
+        animation: slide-in 1s linear;
     }
+
+    @keyframes slide-in {
+        0%{
+            top: -110%;
+        }
+
+        100%{
+            top: 0;
+        }
+    }
+
     header .header-buttons div a, .header-buttons .ham-icons i{
         color: var(--primary-color);
     }
+
 
     .header-buttons .close-menu{
         display: block;
@@ -185,6 +200,11 @@ header .header-buttons .button-four{
     color: var(--primary-color);
     transition: color 500ms linear;
    }
+
+   header .header-buttons div a:hover{
+    color: var(--main-color);
+}
+
    .header-buttons .ham-icons i:hover, .close-menu i:hover{
         color: var(--main-color);
     }
@@ -192,7 +212,7 @@ header .header-buttons .button-four{
 
 
 
-
+/* fot the light and dark theme */
 .light-click{
     max-width: 50px;
     overflow: hidden;
@@ -707,7 +727,7 @@ input[type="checkbox"]{
 
 .call-text .buttons{
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
 }
 
 .call-text button{
@@ -718,7 +738,7 @@ input[type="checkbox"]{
     cursor: pointer;
     transition: ease-in;
     transition-duration: 500ms;
-    margin-right: 50px;
+    margin-right: 10px;
 }
 
 .call-text button:hover{
@@ -871,6 +891,12 @@ footer .copy-right p {
         scale: 1;
     }
 
+    header{
+        .open-menu{
+            scale: .7;
+        }
+    }
+
     .about-me-image{
         margin-top: 30px;
     }
@@ -878,16 +904,15 @@ footer .copy-right p {
         display: flex;
         flex-direction: column-reverse;
     }
+    
     .call-text button{
         scale: .7;
-        margin-right: 0px;
+        margin-right: -30px;
     }
     .call-text{
         padding: 100px 20px;
     }
-    /* header img, header div {
-        scale: .8;
-    } */
+    
     .day-night{
         scale: .8;
     }
@@ -907,6 +932,10 @@ footer .copy-right p {
     .experience{
         scale: .8;
         padding-left: 50px;
+    }
+    .experience .experience-list ul{
+        display: grid;
+        grid-template-columns: 3fr;
     }
     .scroll-to-top {
         scale: .7;
@@ -1005,7 +1034,6 @@ footer .copy-right p {
 
 @media (width <= 435px) {
     header {
-        justify-content: space-around;
         max-width: 435px;
     }
   }
@@ -1013,6 +1041,7 @@ footer .copy-right p {
 @media (width <= 400px) {
     footer .icons a {
         background-color: whitesmoke;
+        padding: 5px 6px;
         scale: .9;
     }
     footer {
