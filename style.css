@@ -18,6 +18,7 @@ html{
     --main-color: #01dbc2;
     --main-color-hover: #008e7d;
     --scroll-color: #78faea;
+    --type-writer: rgb(0, 0, 0);
 }
 
 .light-theme{
@@ -28,6 +29,7 @@ html{
     --main-color: orange;
     --main-color-hover: rgb(176, 115, 0);
     --scroll-color: rgb(255, 215, 142);
+    --type-writer: rgb(241, 239, 239);
 }
 
 body{
@@ -242,9 +244,9 @@ input[type="checkbox"]{
     z-index: 2;
 }
 
-/* .text-in-hero .type::before{
-    background: var(--hero-color);
-    animation: typewriter 3s steps(22) infinite;
+.text-in-hero .type::before{
+    background: var(--type-writer);
+    animation: typewriter 4s 100ms steps(22) infinite;
     opacity: 1;
 }
 
@@ -253,13 +255,26 @@ input[type="checkbox"]{
         left: 0;
     }
     100%{
-        left: 100%;
+        left: 110%;
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
 .text-in-hero .type::after{
-
-} */
+    content: '|';
+    animation: typewriter 4s steps(22) infinite, blink 800ms infinite;
+}
 
 .text-in-hero h5 {
     margin: 20px 0;
