@@ -51,9 +51,9 @@ closeMenu.addEventListener('click', close);
 
 function show(){
   mainMenu.style.display = 'flex'
-  mainMenu.style.top = '0'
+  mainMenu.style.left = '30%'
 }
 
 function close(){
-  mainMenu.style.top = '-110%'
+  mainMenu.style.left = '110%'
 }
