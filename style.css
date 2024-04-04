@@ -59,7 +59,7 @@ header{
     z-index: 2;
 }
 
-.header-buttons{
+.buttons{
     display: flex;
     align-items: center;
 }
@@ -105,7 +105,7 @@ header .header-buttons div a:hover{
     color: var(--primary-color);
 }
 
-header .header-buttons .button-one{
+header .header-buttons .buttons .button-one{
     transition-property: position;
     visibility: hidden;
     animation: button .5s ease-in .5s forwards;
@@ -808,6 +808,15 @@ footer .copy-right p {
         transition:  left 1s ease;
         display: none;
         animation: slide-in 1s linear;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-top: -50px;
     }
 
     @keyframes slide-in {

@@ -44,16 +44,19 @@ window.addEventListener("scroll", ()=>{
 const openMenu = document.querySelector(".open-menu");
 const closeMenu = document.querySelector(".close-menu");
 const mainMenu = document.querySelector(".header-buttons");
+const buttons = document.querySelector(".buttons");
 
 
 openMenu.addEventListener('click', show);
 closeMenu.addEventListener('click', close);
 
 function show(){
-  mainMenu.style.display = 'flex'
-  mainMenu.style.left = '30%'
+  mainMenu.style.display = 'flex';
+  mainMenu.style.left = '30%';
+  buttons.style.opacity = '1';
 }
 
 function close(){
-  mainMenu.style.left = '120%'
+  mainMenu.style.left = '120%';
+  buttons.style.opacity = '0';
 }
