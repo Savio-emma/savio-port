@@ -55,5 +55,5 @@ function show(){
 }
 
 function close(){
-  mainMenu.style.left = '110%'
+  mainMenu.style.left = '120%'
 }

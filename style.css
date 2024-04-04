@@ -812,7 +812,7 @@ footer .copy-right p {
 
     @keyframes slide-in {
         0%{
-            left: 110%;
+            left: 120%;
         }
 
         100%{
