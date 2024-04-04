@@ -27,7 +27,7 @@ header .header-buttons .button-one{
 }
 
 header .header-buttons .button-two{
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--main-color-hover);
     border-radius: 10px;
 }
 

@@ -41,8 +41,6 @@ window.addEventListener("scroll", ()=>{
 })
 
 //this part is the open and close menu for pads and mobiles only!
-
-
 const openMenu = document.querySelector(".open-menu");
 const closeMenu = document.querySelector(".close-menu");
 const mainMenu = document.querySelector(".header-buttons");

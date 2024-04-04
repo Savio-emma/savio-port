@@ -28,7 +28,7 @@ header .header-buttons .button-one{
 }
 
 header .header-buttons .button-three{
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--main-color-hover);
     border-radius: 10px;
 }
 
@@ -116,15 +116,21 @@ header .header-buttons .button-three{
     max-width: fit-content;
 }
 
-.prompt-icons  i {
+.prompt-icons  i{
     scale: 1.6;
     margin: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 1s, color 1s;
 }
 
-.facebook{
-   grid-column-start: 1;
+.prompt-icons  i:hover {
+    scale: 1.8;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
-.facebook i{
+
+/* .facebook i{
     color: rgb(41, 41, 250);
     background-color: white;
 }
@@ -155,7 +161,7 @@ header .header-buttons .button-three{
 .github i {
     color: black;
     background-color: white;
-}
+} */
 @property --a
 {
     syntax: '<angle>';
@@ -345,6 +351,7 @@ form .submit input[type=submit]:hover{
 .socials i{
     font-size: 1.5rem;
     transition: opacity 1s;
+    color: var(--primary-color);
 } 
 
 .socials i:hover{
@@ -352,7 +359,7 @@ form .submit input[type=submit]:hover{
     cursor: pointer;
 }
 
-.green i {
+/* .green i {
     color: rgb(29, 207, 29);
 
 }
@@ -363,7 +370,7 @@ form .submit input[type=submit]:hover{
 
 .purple i{
     color: rgb(112, 50, 156);
-}
+} */
 
 .socials h4{
     font-family: Arial, Helvetica, sans-serif;

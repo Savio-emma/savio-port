@@ -73,7 +73,7 @@ header img{
 header .header-buttons div a{
     color: black;
     text-decoration: none;
-    margin-right: 2rem;
+    column-gap: 2rem;
     cursor: pointer;
     transition: ease-in 500ms;
     font-family: Arial, Helvetica, sans-serif;
@@ -109,7 +109,7 @@ header .header-buttons .button-one{
     transition-property: position;
     visibility: hidden;
     animation: button .5s ease-in .5s forwards;
-    border: 1px solid var(--primary-color);
+    border: 3px solid var(--main-color-hover);
     border-radius: 10px;
 
 }
@@ -232,7 +232,6 @@ input[type="checkbox"]{
 }
 
 .text-in-hero .type{
-    font-size: 1.5rem;
     position: relative;
     width: fit-content;
 }
@@ -244,37 +243,6 @@ input[type="checkbox"]{
     z-index: 2;
 }
 
-.text-in-hero .type::before{
-    background: var(--type-writer);
-    animation: typewriter 4s 100ms steps(22) infinite;
-    opacity: 1;
-}
-
-@keyframes typewriter {
-    0%{
-        left: 0;
-    }
-    100%{
-        left: 110%;
-    }
-}
-
-@keyframes blink {
-    0%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.2;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.text-in-hero .type::after{
-    content: '|';
-    animation: typewriter 4s steps(22) infinite, blink 800ms infinite;
-}
 
 .text-in-hero h5 {
     margin: 20px 0;
@@ -885,8 +853,16 @@ footer .copy-right p {
     color: var(--main-color);
 }
 
-   .header-buttons .ham-icons i:hover, .close-menu i:hover{
-        color: var(--main-color);
+    .close-menu i{
+    color: var(--main-color);
+    }
+
+    .close-menu i:hover{
+        color: var(--primary-color);
+    }
+
+    .header-buttons .ham-icons i:hover{
+            color: var(--main-color);
     }
 }
 
