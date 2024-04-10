@@ -258,18 +258,19 @@ input[type="checkbox"]{
 }
 
 .hero-section h2{
-    font-family: "Kode Mono", monospace;
+    font-family: caudex;
 }
 .hero-section h4{
     margin-bottom: 20px;
     margin-top: 20px;
-    font-family: "Kode Mono", monospace;
+    font-family: caudex;
 }
 .hero-section h1{
     margin-bottom: 10px;
     /* font-family: 'Tangerine', serif; */
-    font-family: "Kode Mono", monospace;
-    font-size: 48px;
+    font-family: caudex;
+    font-size: 30px;
+    font-weight: 900;
     text-shadow: 4px 4px 4px #5d5d5d;
 }
 
@@ -355,17 +356,17 @@ input[type="checkbox"]{
 .about-me .about-me-text{
     text-align: left;
     max-width: 600px;
-    font-family: "Kode Mono", monospace;
+    font-family: caudex;
 }
 
 .about-me-text h4 {
-    font-family: "Pacifico", cursive;
+    font-family: caudex;
     color: var(--main-color);
     filter: drop-shadow( 0 0 5px var(--main-color));
 }
 
 .about-me-text h3 {
-    font-family: "Kode Mono", monospace;
+    font-family: caudex;
     font-size: large;
     font-weight: bolder;
     margin-bottom: 20px;
@@ -913,6 +914,7 @@ footer .copy-right p {
     .hero-call-text{
         max-width: 550px;
     }
+
 }
 
 @media (width <= 680px) {
@@ -924,7 +926,23 @@ footer .copy-right p {
         flex-direction: column;
         text-align: center;
     }
-    
+    /* .type{
+        position: relative;
+        width: fit-content;
+    }
+    .type::before{
+        content: '';
+        background-color: #ffffff;
+    }
+
+    .after{
+        content: '';
+        z-index: 2;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        height: 50px;
+    } */
 }
 
 @media (width <= 600px) {
