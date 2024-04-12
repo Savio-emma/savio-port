@@ -44,7 +44,7 @@ window.addEventListener("scroll", ()=>{
 const openMenu = document.querySelector(".open-menu");
 const closeMenu = document.querySelector(".close-menu");
 const mainMenu = document.querySelector(".header-buttons");
-const buttons = document.querySelector(".buttons");
+const buttons = document.querySelectorAll(".stager");
 
 
 openMenu.addEventListener('click', show);
@@ -53,10 +53,14 @@ closeMenu.addEventListener('click', close);
 function show(){
   mainMenu.style.display = 'flex';
   mainMenu.style.left = '30%';
-  buttons.style.opacity = '1';
+  buttons.forEach(button =>{
+    button.classList.add("stager-anime");
+  })
 }
 
 function close(){
   mainMenu.style.left = '120%';
-  buttons.style.opacity = '0';
+  buttons.forEach(button =>{
+    button.classList.remove("stager-anime");
+  })
 }

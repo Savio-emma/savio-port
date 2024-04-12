@@ -145,6 +145,19 @@ header .header-buttons .button-four{
      }
 }
 
+@keyframes buttons {
+    0%{
+        opacity: 0;
+        transform: translateY(-3rem);
+     }
+     
+     100%{
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+     }
+}
+
 
 /* fot the light and dark theme */
 .light-click{
@@ -810,6 +823,24 @@ footer .copy-right p {
         display: none;
         animation: slide-in 1s linear;
     }
+    
+
+
+header .header-buttons .buttons .button-one,
+header .header-buttons .buttons .button-two,
+header .header-buttons .buttons .button-three,
+header .header-buttons .buttons .button-four{
+    opacity: 0;
+    display: none;
+}
+
+header .header-buttons .buttons .button-one.stager-anime,
+header .header-buttons .buttons .button-two.stager-anime,
+header .header-buttons .buttons .button-three.stager-anime,
+header .header-buttons .buttons .button-four.stager-anime{
+    display: block;
+    
+}
 
     .buttons{
         display: flex;
