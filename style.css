@@ -458,11 +458,23 @@ input[type="checkbox"]{
 .my-skills-grid div {
     margin-top: 20px;
     margin-left: 10px;
-    height: 150px;
+    height: 250px;
     width: 150px;
     background-color: var(--skill-color);
     color: var(--primary-color);
     padding: 30px;
+    font-family: nunito;
+}
+
+.my-skills-grid div h3{
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.my-skills-grid div p{
+    font-size: large;
+    font-weight: bold;
 }
 
 .horizontal-rule{
@@ -1037,9 +1049,6 @@ header .header-buttons .buttons .button-four.stager-anime{
 }
 
 @media (width <= 560px) {
-    .my-skills {
-        scale: .7;
-    }
     .about-me-image {
         scale: .8;
     }
@@ -1070,7 +1079,7 @@ header .header-buttons .buttons .button-four.stager-anime{
     }
 
     header {
-        max-width: 414px; 
+        max-width: 450px; 
     }
 
     .after-header{
@@ -1079,7 +1088,7 @@ header .header-buttons .buttons .button-four.stager-anime{
 
     
     .my-skills-grid{
-        scale: .7;
+        scale: .8;
     }
 
     .skill-section-grid{
@@ -1099,6 +1108,12 @@ header .header-buttons .buttons .button-four.stager-anime{
 
     header img {
         margin-left: 5px;
+    }
+}
+
+@media (width <= 365px) {
+    .my-skills-grid{
+        scale: .7;
     }
 }
 
