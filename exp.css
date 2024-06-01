@@ -79,7 +79,7 @@ header .header-buttons .button-four{
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    
+    display: none;
 }
 
 .cover button:hover{
